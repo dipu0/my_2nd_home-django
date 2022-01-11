@@ -9,8 +9,6 @@ GRAPHICAL USER INTERFACE:
 
 ![](readme_files/image003.png)
 
-\
-
  
 
 LOG IN PAGE:
