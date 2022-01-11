@@ -52,7 +52,7 @@ HOME DETAILS:
 ----------------------------------------------------------
 
 ![](readme_files/image009.png)
-![](readme_files/image010.png){#Picture 21 width="717" height="751"}
+![](readme_files/image010.png)
 
  
 
