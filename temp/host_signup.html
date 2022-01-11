@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Become Host | {{user.full_name}}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/formBox.css'%}">
+    
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    		<!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+</head>
+{% if user.is_authenticated %}
+<body class="susi">
+
+    <div class="login-box">
+        <div class="login-box-content">
+            <h2>Host SignUp</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="address" class="form-control" maxlength="200" placeholder="Address" required>            
+                <button type="submit" >Host Sign Up</button>
+
+            </form>
+            <div>
+                {% if messages %}
+                {% for m in messages %}
+                    <p>{{m}}</p>
+                {% endfor %}
+                {% endif %}
+                <a class="profile-btn" href="{% url 'HostProfile' user.id %}">Go to Profile</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endif %}
+</html>

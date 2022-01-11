@@ -1,0 +1,5 @@
+.cover {
+    background-image: url('/static/img/usercover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat
+}
